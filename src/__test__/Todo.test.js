@@ -1,3 +1,9 @@
+import React from "react";
+import { shallow, mount } from "enzyme";
+import Todo from "../Todo";
+
 describe("Todo", () => {
-  // Tests will go here using `it` blocks
+  it("renders", () => {
+    shallow(<Todo />);
+  });
 });
