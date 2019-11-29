@@ -26,4 +26,16 @@ describe("Todo", () => {
         .text()
     ).toEqual("Fix failing test");
   });
+
+  it("removes an item", () => {
+    const wrapper = mount(<Todo />);
+    wrapper
+      .find("li button")
+      .first()
+      .simulate("click");
+    expect(wrapper.find("li")).toHaveLength(1);
+    expect(wrapper.find("li span").map(item => item.text())).toEqual([
+      "Take out the trash"
+    ]);
+  });
 });
