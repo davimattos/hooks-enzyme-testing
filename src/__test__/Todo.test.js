@@ -6,4 +6,9 @@ describe("Todo", () => {
   it("renders", () => {
     shallow(<Todo />);
   });
+
+  it("display initial to-dos", () => {
+    const wrapper = mount(<Todo />);
+    expect(wrapper.find("li")).toHaveLength(2);
+  });
 });
