@@ -1,11 +1,5 @@
 import React from "react";
 
-function Todo() {
-  return (
-    <div>
-      <h1>title</h1>
-    </div>
-  );
-}
+function Todo() {}
 
 export default Todo;
